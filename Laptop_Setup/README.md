@@ -58,3 +58,23 @@ git config --global user.email "email"
 
 #list config to verify 
 git config --global --list
+
+
+5. AWS CLI setup
+
+# create aws key for iam account in aws
+
+# create new profile (do not name this 'default')
+aws configure --profile donbeckeradmin
+(add AWS Access Key ID)
+(add AWS Secret Access Key)
+Default region name: us-east-2
+Default output format: json
+
+# set the active profile 
+$env:AWS_PROFILE="donbeckeradmin"
+
+# verify active profile
+aws configure list
+
+
