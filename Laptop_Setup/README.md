@@ -78,3 +78,9 @@ $env:AWS_PROFILE="donbeckeradmin"
 aws configure list
 
 
+6. VSCode setup
+
+Open vscode
+Extensions
+Install: 
+Terraform 1.3.4 (Mikael Olenfalk)
