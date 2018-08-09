@@ -30,7 +30,7 @@ PSA> cinst -y winmerge
 PSA> cinst -y slack
 PSA> cinst -y poshgit
 PSA> cinst -y openssh -params '"/SSHAgentFeature"'
-
+PSA> cinst -y graphviz
 
 4. Git setup
 
