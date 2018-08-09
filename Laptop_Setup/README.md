@@ -51,3 +51,10 @@ ssh-add ./.ssh/id_rsa
 Get-Content .\.ssh\id_rsa.pub | clip
 
 #add pub key to github profile
+
+#set git config 
+git config --global user.name "donbecker"
+git config --global user.email "email"
+
+#list config to verify 
+git config --global --list
