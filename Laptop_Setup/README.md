@@ -31,11 +31,10 @@ Execute all below in Powershell Admin window
 `cinst -y openssh -params '"/SSHAgentFeature"'`  
 `cinst -y graphviz`  
 
-1. Git setup    
+## SSK Key, Git and Github 
 `cd C:\Users\Don`   
 `mkdir .ssh`    
 
-## SSK Key, Git and Github 
 `ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"`   
 
 confirm ssh-agent service running and return pid  
