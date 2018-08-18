@@ -15,21 +15,21 @@ Execute all below in Powershell Admin window
 `cinst -y lastpass-chrome`  
 
 3. more packages
-PSA> cinst -y vscode  
-PSA> cinst -y github-desktop  
-PSA> cinst -y terraform  
-PSA> cinst -y packer  
-PSA> cinst -y awscli  
-PSA> cinst -y putty  
-PSA> cinst -y git  
-PSA> cinst -y cygwin  
-PSA> cinst -y 7zip  
-PSA> cinst -y notepadplusplus  
-PSA> cinst -y winmerge  
-PSA> cinst -y slack  
-PSA> cinst -y poshgit  
-PSA> cinst -y openssh -params '"/SSHAgentFeature"'  
-PSA> cinst -y graphviz  
+`cinst -y vscode`  
+`cinst -y github-desktop`  
+`cinst -y terraform`  
+`cinst -y packer`  
+`cinst -y awscli`  
+`cinst -y putty`  
+`cinst -y git`  
+`cinst -y cygwin`  
+`cinst -y 7zip`  
+`cinst -y notepadplusplus`  
+`cinst -y winmerge`  
+`cinst -y slack`  
+`cinst -y poshgit`  
+`cinst -y openssh -params '"/SSHAgentFeature"'`  
+`cinst -y graphviz`  
 
 4. Git setup  
 PS>   
