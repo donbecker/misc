@@ -57,25 +57,24 @@ list config to verify
 `git config --global --list`  
 
 
-5. AWS CLI setup
+## AWS CLI setup
+1. create aws key for iam account in aws  
 
-# create aws key for iam account in aws
+1. create new profile (do not name this 'default')  
+`aws configure --profile donbeckeradmin`  
+(add AWS Access Key ID)  
+(add AWS Secret Access Key)  
+`Default region name: us-east-2`  
+`Default output format: json`  
 
-# create new profile (do not name this 'default')
-aws configure --profile donbeckeradmin
-(add AWS Access Key ID)
-(add AWS Secret Access Key)
-Default region name: us-east-2
-Default output format: json
+1. set the active profile  
+`$env:AWS_PROFILE="donbeckeradmin"`  
 
-# set the active profile 
-$env:AWS_PROFILE="donbeckeradmin"
-
-# verify active profile
-aws configure list
+1. verify active profile
+`aws configure list`  
 
 
-6. VSCode setup
+## VSCode setup
 
 Open vscode
 Extensions
