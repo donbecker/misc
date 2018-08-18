@@ -7,14 +7,14 @@ Execute all below in Powershell Admin window
 `iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`  
 `exit`  
 
-2. install packages    
+1. install packages    
 `cinst -y googlechrome`  
 `cinst -y steam -ignore-checksums`  
 `cinst -y lastpass`  
 `cinst -y lastpass-for-applications`  
 `cinst -y lastpass-chrome`  
 
-3. more packages
+1. more packages  
 `cinst -y vscode`  
 `cinst -y github-desktop`  
 `cinst -y terraform`  
@@ -31,10 +31,9 @@ Execute all below in Powershell Admin window
 `cinst -y openssh -params '"/SSHAgentFeature"'`  
 `cinst -y graphviz`  
 
-4. Git setup  
-PS>   
-cd C:\Users\Don  
-mkdir .ssh  
+1. Git setup    
+`cd C:\Users\Don`   
+`mkdir .ssh`    
 
 # SSK Key, Git and Github 
 ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"  
