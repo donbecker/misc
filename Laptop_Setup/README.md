@@ -29,7 +29,8 @@ Execute all below in Powershell Admin window
 `cinst -y slack`  
 `cinst -y poshgit`  
 `cinst -y openssh -params '"/SSHAgentFeature"'`  
-`cinst -y graphviz`  
+`cinst -y graphviz`
+`cinst -y golang`  
 `exit`  
 
 ## SSK Key, Git and Github 
