@@ -11,7 +11,6 @@ PSA> cinst -y lastpass-for-applications
 PSA> cinst -y lastpass-chrome  
 
 3. more packages
-
 PSA> cinst -y vscode  
 PSA> cinst -y github-desktop  
 PSA> cinst -y terraform  
@@ -28,32 +27,31 @@ PSA> cinst -y poshgit
 PSA> cinst -y openssh -params '"/SSHAgentFeature"'  
 PSA> cinst -y graphviz  
 
-4. Git setup
+4. Git setup  
+PS>   
+cd C:\Users\Don  
+mkdir .ssh  
 
-PS> 
-cd C:\Users\Don
-mkdir .ssh
+# gen key  
+ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"  
 
-# gen key
-ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"
+#confirm ssh-agent service running and return pid  
+WMIC Service WHERE "Name = 'ssh-agent'" GET ProcessId  
 
-#confirm ssh-agent service running and return pid
-WMIC Service WHERE "Name = 'ssh-agent'" GET ProcessId
+#add key to agent  
+ssh-add ./.ssh/id_rsa  
 
-#add key to agent
-ssh-add ./.ssh/id_rsa
+#add pub key to clipboard  
+Get-Content .\.ssh\id_rsa.pub | clip  
 
-#add pub key to clipboard
-Get-Content .\.ssh\id_rsa.pub | clip
+#add pub key to github profile  
 
-#add pub key to github profile
+#set git config   
+git config --global user.name "donbecker"  
+git config --global user.email "email"  
 
-#set git config 
-git config --global user.name "donbecker"
-git config --global user.email "email"
-
-#list config to verify 
-git config --global --list
+#list config to verify   
+git config --global --list  
 
 
 5. AWS CLI setup
