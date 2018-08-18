@@ -30,6 +30,7 @@ Execute all below in Powershell Admin window
 `cinst -y poshgit`  
 `cinst -y openssh -params '"/SSHAgentFeature"'`  
 `cinst -y graphviz`  
+`exit`  
 
 ## SSK Key, Git and Github 
 `cd C:\Users\Don`   
