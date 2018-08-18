@@ -102,7 +102,7 @@ Terraform 1.3.4 (Mikael Olenfalk)
 `mkdir C:\Users\Don\code\Go-ws\src`  
 
 1. Set Sys env var  
-`[System.Environment]::SetEnvironmentVariable('GOPATH', 'C:\Users\Don\code\Go-ws'`  
+`[System.Environment]::SetEnvironmentVariable('GOPATH', 'C:\Users\Don\code\Go-ws', [System.EnvironmentVariableTarget]::User)`  
 `exit`
 
 1. Verify  
