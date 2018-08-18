@@ -1,3 +1,5 @@
+## Chocolatey and packages
+
 1. Install Chocolately  
 PSA> Set-ExecutionPolicy Bypass -Scope Process -Force  
 PSA> iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))  
@@ -32,7 +34,7 @@ PS>
 cd C:\Users\Don  
 mkdir .ssh  
 
-# gen key  
+# SSK Key, Git and Github 
 ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"  
 
 #confirm ssh-agent service running and return pid  
