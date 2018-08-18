@@ -108,7 +108,7 @@ Terraform 1.3.4 (Mikael Olenfalk)
 1. Verify env var
 `$env:GOPATH`
 
-1. Verify with a hello world
-`go get github.com/golang/example/hello`
-`cd $env:GOPATH\bin`
-`.\hello.exe`
+1. Verify with a hello world  
+`go get github.com/golang/example/hello`  
+`cd $env:GOPATH\bin`  
+`.\hello.exe`  
