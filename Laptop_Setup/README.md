@@ -30,7 +30,6 @@ Execute all below in Powershell Admin window
 `cinst -y poshgit`  
 `cinst -y openssh -params '"/SSHAgentFeature"'`  
 `cinst -y graphviz`
-`cinst -y golang`  
 `exit`  
 
 ## SSK Key, Git and Github 
@@ -79,5 +78,32 @@ list config to verify
 
 Open vscode
 Extensions
-Install: 
+Install:   
 Terraform 1.3.4 (Mikael Olenfalk)
+
+## Go dev setup
+
+1. install go  
+`cinst -y golang`  
+`exit`  
+
+1. verify  
+`go version`
+
+1. Go development uses the concept of a `workspace` with three subfolders
+`bin` for command executables
+`pkg` for packages
+`src` for source, typically subfolders under this per repo
+
+1. Create Go workspace  
+`mkdir C:\Users\Don\code\Go-ws`
+`mkdir C:\Users\Don\code\Go-ws\bin`
+`mkdir C:\Users\Don\code\Go-ws\pkg`
+`mkdir C:\Users\Don\code\Go-ws\src`
+
+1. Set Sys env var  
+`[System.Environment]::SetEnvironmentVariable('GOPATH', 'C:\Users\Don\code\Go-ws'`
+`exit`
+
+1. Verify  
+`$env:GOPATH`
