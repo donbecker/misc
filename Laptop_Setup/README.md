@@ -3,16 +3,16 @@ Execute all below in Powershell Admin window
 ## Chocolatey and packages
 
 1. Install Chocolately  
-`Set-ExecutionPolicy Bypass -Scope Process -Force`
-`iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`
-`exit`
+`Set-ExecutionPolicy Bypass -Scope Process -Force`  
+`iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))`  
+`exit`  
 
-2. install packages  
-`cinst -y googlechrome`
-`cinst -y steam -ignore-checksums`
-`cinst -y lastpass`
-`cinst -y lastpass-for-applications`
-`cinst -y lastpass-chrome`
+2. install packages    
+`cinst -y googlechrome`  
+`cinst -y steam -ignore-checksums`  
+`cinst -y lastpass`  
+`cinst -y lastpass-for-applications`  
+`cinst -y lastpass-chrome`  
 
 3. more packages
 PSA> cinst -y vscode  
