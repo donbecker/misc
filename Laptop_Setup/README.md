@@ -96,10 +96,10 @@ Terraform 1.3.4 (Mikael Olenfalk)
 `src` for source, typically subfolders under this per repo
 
 1. Create Go workspace  
-`mkdir C:\Users\Don\code\Go-ws`
-`mkdir C:\Users\Don\code\Go-ws\bin`
-`mkdir C:\Users\Don\code\Go-ws\pkg`
-`mkdir C:\Users\Don\code\Go-ws\src`
+`mkdir C:\Users\Don\code\Go-ws`  
+`mkdir C:\Users\Don\code\Go-ws\bin`  
+`mkdir C:\Users\Don\code\Go-ws\pkg`  
+`mkdir C:\Users\Don\code\Go-ws\src`  
 
 1. Set Sys env var  
 `[System.Environment]::SetEnvironmentVariable('GOPATH', 'C:\Users\Don\code\Go-ws'`
