@@ -105,5 +105,10 @@ Terraform 1.3.4 (Mikael Olenfalk)
 `[System.Environment]::SetEnvironmentVariable('GOPATH', 'C:\Users\Don\code\Go-ws', [System.EnvironmentVariableTarget]::User)`  
 `exit`
 
-1. Verify  
+1. Verify env var
 `$env:GOPATH`
+
+1. Verify with a hello world
+`go get github.com/golang/example/hello`
+`cd $env:GOPATH\bin`
+`.\hello.exe`
