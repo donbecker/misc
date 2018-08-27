@@ -67,8 +67,8 @@ list config to verify
 `Default region name: us-east-2`  
 `Default output format: json`  
 
-1. set the active profile  
-`$env:AWS_PROFILE="donbeckeradmin"`  
+1. set the active profile and close Powershell window
+`[System.Environment]::SetEnvironmentVariable('AWS_PROFILE', 'DonBeckerAdmin', [System.EnvironmentVariableTarget]::User)`  
 
 1. verify active profile
 `aws configure list`  
