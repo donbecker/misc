@@ -31,7 +31,7 @@ Execute all below in Powershell Admin window
 `cinst -y graphviz`
 `exit`  
 
-## Ensure correct OpenSSH 
+## SSK Key, Git and Github 
 (tested on Windows 10)
 
 determine if Windows OpenSSH is installed
@@ -54,11 +54,14 @@ install openssh portable
 verify exes are coming from "C:\Program Files\OpenSSH-Win64"
 `Get-Command ssh*exe`
 
-## SSK Key, Git and Github 
-`cd C:\Users\Don`   
-`mkdir .ssh`    
+configure git client to use new exes
+`git config --global core.sshCommand "'C:\Program Files\OpenSSH-Win64\ssh.exe'"`
 
+create ssh key
+`cd C:\Users\Don`   
+`mkdir .ssh` 
 `ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"`   
+* note that we must specify the full path if not using the default name
 
 confirm ssh-agent service running and return pid  
 `Get-Service ssh-agent`
@@ -66,9 +69,12 @@ confirm ssh-agent service running and return pid
 add key to agent  
 `ssh-add ./.ssh/id_rsa`  
 
+confirm key added to agent
+`ssh-add -l`
+
 set git config   
 `git config --global user.name "donbecker"`  
-`git config --global user.email "email"`  
+`git config --global user.email "donbecker@donbeckeronline.com"`  
 
 list config to verify   
 `git config --global --list`  
