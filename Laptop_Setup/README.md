@@ -39,7 +39,7 @@ Execute all below in Powershell Admin window
 `ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"`   
 
 confirm ssh-agent service running and return pid  
-`WMIC Service WHERE "Name = 'ssh-agent'" GET ProcessId`  
+`Get-Service ssh-agent`
 
 add key to agent  
 `ssh-add ./.ssh/id_rsa`  
