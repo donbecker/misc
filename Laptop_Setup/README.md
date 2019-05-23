@@ -44,17 +44,28 @@ confirm ssh-agent service running and return pid
 add key to agent  
 `ssh-add ./.ssh/id_rsa`  
 
-add pub key to clipboard  
-`Get-Content .\.ssh\id_rsa.pub | clip`  
-
-add pub key to github profile  
-
 set git config   
 `git config --global user.name "donbecker"`  
 `git config --global user.email "email"`  
 
 list config to verify   
 `git config --global --list`  
+
+## GitHub setup
+
+add pub key to clipboard  
+`Get-Content .\.ssh\id_rsa.pub | clip`  
+
+add pub key to github profile  
+* Upper right profile picture -> Settings -> SSH and GPG tab
+* Give name and paste public key into text box
+
+test github
+`ssh -T git@github.com`
+* accept the fingerprint
+* should say "successfully authenticated"
+
+
 
 
 ## AWS CLI setup
