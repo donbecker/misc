@@ -32,69 +32,50 @@ Execute all below in Powershell Admin window
 `exit`  
 
 ## SSK Key, Git and Github 
-(tested on Windows 10)
 
-determine if Windows OpenSSH is installed
-`Get-Command ssh*exe`
-
-if any exes show Source as "C:\Windows\System32\OpenSSH\.."
-`Remove-WindowsCapability -Online -Name "OpenSSH.Client~~~~0.0.1.0"`
-`Remove-WindowsCapability -Online -Name "OpenSSH.Server~~~~0.0.1.0"`
-
-verify we fixed the exes
-`Get-Command ssh*exe`
-
-stop and remove ssh agent windows service
-`Get-Service ssh-agent | Stop-Service`
-`sc.exe delete ssh-agent`
-
-install openssh portable
-`cinst -y openssh -params '"/SSHAgentFeature"'`  
-
-verify exes are coming from "C:\Program Files\OpenSSH-Win64"
-`Get-Command ssh*exe`
-
-configure git client to use new exes
-`git config --global core.sshCommand "'C:\Program Files\OpenSSH-Win64\ssh.exe'"`
-
-create ssh key
-`cd C:\Users\Don`   
-`mkdir .ssh` 
-`ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"`   
-* note that we must specify the full path if not using the default name
-
-confirm ssh-agent service running and return pid  
-`Get-Service ssh-agent`
-
-add key to agent  
-`ssh-add ./.ssh/id_rsa`  
-
-confirm key added to agent
-`ssh-add -l`
-
-set git config   
-`git config --global user.name "donbecker"`  
-`git config --global user.email "donbecker@donbeckeronline.com"`  
-
-list config to verify   
-`git config --global --list`  
+* determine if Windows OpenSSH is installed
+    * `Get-Command ssh*exe`
+* if any exes show Source as "C:\Windows\System32\OpenSSH\.."
+    * `Remove-WindowsCapability -Online -Name "OpenSSH.Client~~~~0.0.1.0"`
+    * `Remove-WindowsCapability -Online -Name "OpenSSH.Server~~~~0.0.1.0"`
+* verify we fixed the exes
+    * `Get-Command ssh*exe`
+* stop and remove ssh agent windows service
+    * `Get-Service ssh-agent | Stop-Service`
+    * `sc.exe delete ssh-agent`
+* install openssh portable
+    * `cinst -y openssh -params '"/SSHAgentFeature"'`  
+* verify exes are coming from "C:\Program Files\OpenSSH-Win64"
+    * `Get-Command ssh*exe`
+* configure git client to use new exes
+    * `git config --global core.sshCommand "'C:\Program Files\OpenSSH-Win64\ssh.exe'"`
+* create ssh key
+    * `cd C:\Users\Don`   
+    * `mkdir .ssh` 
+    * `ssh-keygen -t rsa -b 4096 -C "donbecker@donbeckeronline.com"`   
+    * note that we must specify the full path if not using the default name
+* confirm ssh-agent service running and return pid  
+    * `Get-Service ssh-agent`
+* add key to agent  
+    * `ssh-add ./.ssh/id_rsa`  
+* confirm key added to agent
+    * `ssh-add -l`
+* set git config   
+    * `git config --global user.name "donbecker"`  
+    * `git config --global user.email "donbecker@donbeckeronline.com"`  
+* list config to verify   
+    * `git config --global --list`  
 
 ## GitHub setup
-
-add pub key to clipboard  
-`Get-Content .\.ssh\id_rsa.pub | clip`  
-
-add pub key to github profile  
-* Upper right profile picture -> Settings -> SSH and GPG tab
-* Give name and paste public key into text box
-
-test github
-`ssh -T git@github.com`
-* accept the fingerprint
-* should say "successfully authenticated"
-
-
-
+* add pub key to clipboard
+    * `Get-Content .\.ssh\id_rsa.pub | clip`  
+* add pub key to github profile  
+    * Upper right profile picture -> Settings -> SSH and GPG tab
+    * Give name and paste public key into text box
+* test github
+    * `ssh -T git@github.com`
+    * accept the fingerprint
+    * should say "successfully authenticated"
 
 ## AWS CLI setup
 1. create aws key for iam account in aws  
