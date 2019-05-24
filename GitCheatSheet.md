@@ -1,17 +1,17 @@
 # Git Cheat Sheet
 ## Short List: 
 
-`git checkout -b <newbranch>`
-`git push origin <newbranch> `
-`git add -A . `
-`git commit -m 'message'`
-`git push --set-upstream origin <newbranch>`
-`hub pull-request -m 'PR comment'`
-(merge PR in Github manually for code review)
-`git checkout master`
-`git pull`
-`git push --delete origin <newbranch>`
-`git branch -d db-sectestquestions`
+* `git checkout -b <newbranch>`
+* `git push origin <newbranch> `
+* `git add -A . `
+* `git commit -m 'message'`
+* `git push --set-upstream origin <newbranch>`
+* `hub pull-request -m 'PR comment'`
+* (merge PR in Github manually for code review)
+* `git checkout master`
+* `git pull`
+* `git push --delete origin <newbranch>`
+* `git branch -d db-sectestquestions`
 
 ## Basic Commands:
 
