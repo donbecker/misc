@@ -8,6 +8,10 @@
 `git push --set-upstream origin <newbranch>`
 `hub pull-request -m 'PR comment'`
 (merge PR in Github manually for code review)
+`git checkout master`
+`git pull`
+`git push --delete origin <newbranch>`
+`git branch -d db-sectestquestions`
 
 ## Basic Commands:
 
