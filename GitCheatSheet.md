@@ -11,7 +11,7 @@
 * `git checkout master`
 * `git pull`
 * `git push --delete origin <newbranch>`
-* `git branch -d db-sectestquestions`
+* `git branch -d <newbranch>`
 
 ## Basic Commands:
 
