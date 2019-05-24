@@ -77,6 +77,16 @@ Execute all below in Powershell Admin window
     * accept the fingerprint
     * should say "successfully authenticated"
 
+## Install Hub
+* Hub wraps git, allowing things like PR's from the command line
+    * https://github.com/github/hub
+* Install Hub
+    * `cinst -y hub`
+    * note the first time we use hub it will prompt for github creds
+        * https://github.com/github/hub/issues/1644#issuecomment-359002547
+        * https://github.com/github/hub/issues/978
+        * https://github.com/github/hub/issues/1486
+        * https://github.com/github/hub/issues/1644#issuecomment-359563609
 ## AWS CLI setup
 1. create aws key for iam account in aws  
 

@@ -1,5 +1,15 @@
-## Git Cheat Sheet
-Basic Commands:
+# Git Cheat Sheet
+## Short List: 
+
+`git checkout -b <newbranch>`
+`git push origin <newbranch> `
+`git add -A . `
+`git commit -m 'message'`
+`git push --set-upstream origin <newbranch>`
+`hub pull-request -m 'PR comment'`
+(merge PR in Github manually for code review)
+
+## Basic Commands:
 
 * Clone existing repo to local:
     * `git clone <repo path>`
@@ -34,7 +44,7 @@ Basic Commands:
 * Rollback to pre-commit / uncommit:
     * `git reset HEAD^`
  
-Setup / Config:
+## Setup / Config:
 
 * List Config settings
     * `git config --list`
@@ -49,7 +59,7 @@ Setup / Config:
 * Launch Git GUI for current directory repo
     * `gitk`
 
-Repos:
+## Repos:
 
 * Create new repo in current directory
     * `git init`
@@ -75,7 +85,7 @@ Repos:
     * `git reset --hard <commit id>`
     * `git push -f`
 
-Staging:
+## Staging:
 
 * List Status of current repo
     * `git status`
@@ -96,7 +106,7 @@ Staging:
 * Revert file changes
     * `git checkout -- file`
 
-Commit: 
+## Commit: 
 
 * Commit staged changes
     * `git commit -m 'Commit message'`
@@ -105,7 +115,7 @@ Commit:
 * Change last commit message
     * `git commit --amend -m 'new commit message'`
 
-Branching:
+## Branching:
 
 * Create new branch (does not switch to branch)
     * `git branch branchname`
@@ -116,7 +126,7 @@ Branching:
 * Delete branch
     * `git branch -d branchname`
  
-Tags:
+## Tags:
 
 * List tags
     * `git tag`
@@ -133,7 +143,7 @@ Tags:
 * ​Push all tags to a remote repo
     * `git push repo --tags`
 
-Logs:
+## Logs:
 
 * Return log, last 3, oneline for each commit
     * `git log -3 --oneline`
